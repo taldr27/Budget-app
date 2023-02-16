@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :groups
   resources :deals
   resources :users
-  root 'home#index'
+  root 'users#index'
   get 'home/index'
   get 'home/about'
 end

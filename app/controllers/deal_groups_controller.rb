@@ -1,5 +1,5 @@
 class DealGroupsController < ApplicationController
-  before_action :set_deal_group, only: %i[ show edit update destroy ]
+  before_action :set_deal_group, only: %i[show edit update destroy]
 
   # GET /deal_groups or /deal_groups.json
   def index
@@ -7,8 +7,7 @@ class DealGroupsController < ApplicationController
   end
 
   # GET /deal_groups/1 or /deal_groups/1.json
-  def show
-  end
+  def show; end
 
   # GET /deal_groups/new
   def new
@@ -16,8 +15,7 @@ class DealGroupsController < ApplicationController
   end
 
   # GET /deal_groups/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /deal_groups or /deal_groups.json
   def create
@@ -25,7 +23,7 @@ class DealGroupsController < ApplicationController
 
     respond_to do |format|
       if @deal_group.save
-        format.html { redirect_to deal_group_url(@deal_group), notice: "Deal group was successfully created." }
+        format.html { redirect_to deal_group_url(@deal_group), notice: 'Deal group was successfully created.' }
         format.json { render :show, status: :created, location: @deal_group }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class DealGroupsController < ApplicationController
   def update
     respond_to do |format|
       if @deal_group.update(deal_group_params)
-        format.html { redirect_to deal_group_url(@deal_group), notice: "Deal group was successfully updated." }
+        format.html { redirect_to deal_group_url(@deal_group), notice: 'Deal group was successfully updated.' }
         format.json { render :show, status: :ok, location: @deal_group }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,20 @@ class DealGroupsController < ApplicationController
     @deal_group.destroy
 
     respond_to do |format|
-      format.html { redirect_to deal_groups_url, notice: "Deal group was successfully destroyed." }
+      format.html { redirect_to deal_groups_url, notice: 'Deal group was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_deal_group
-      @deal_group = DealGroup.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def deal_group_params
-      params.require(:deal_group).permit(:group_id, :deal_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_deal_group
+    @deal_group = DealGroup.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def deal_group_params
+    params.require(:deal_group).permit(:group_id, :deal_id)
+  end
 end
