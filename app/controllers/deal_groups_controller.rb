@@ -1,4 +1,6 @@
 class DealGroupsController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_deal_group, only: %i[show edit update destroy]
 
   # GET /deal_groups or /deal_groups.json

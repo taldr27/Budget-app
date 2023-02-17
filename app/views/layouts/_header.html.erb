@@ -19,17 +19,21 @@
       </ul>
 
 
-      <div class="nav-item dropdown">
-        <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Current User
+      <% if user_signed_in? %>
+        <div class="nav-item dropdown">
+          <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <%= current_user.email || 'Current User' %>
+          </div>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'View Profile', current_user, class: 'dropdown-item' %></li>
+            <li><%= link_to 'Edit Profile', edit_user_path(current_user), class: 'dropdown-item' %></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %></li>
+          </ul>
         </div>
-        <ul class="dropdown-menu">
-          <li><%= link_to 'View Profile', root_path, class: 'dropdown-item' %></li>
-          <li><%= link_to 'Edit Profile', edit_user_registration_path, class: 'dropdown-item' %></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %></li>
-        </ul>
-      </div>
+      <% else %>
+        <%= link_to 'Sign in', new_user_session_path, class: 'nav-link active', aria_current: "page"  %>
+      <% end %>
     </div>
   </div>
 </nav>
