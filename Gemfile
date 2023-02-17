@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 gem 'bootsnap', require: false
+gem 'cancancan', '~> 3.4'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'dotenv-rails', '~> 2.8'
 gem 'importmap-rails'
@@ -22,6 +23,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console'
   gem 'letter_opener'
+  gem 'web-console'
 end
