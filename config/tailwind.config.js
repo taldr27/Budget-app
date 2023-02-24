@@ -11,7 +11,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Proxima Nova', 'sans-serif'],
+      },
+      colors: {
+        main: '#3778c2',
+        second: '#5fb523',
+        text: '#434b54',
       },
     },
   },
