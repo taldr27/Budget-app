@@ -2,12 +2,3 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import 'flowbite'
-
-const closeButton = document.querySelector('[data-dismiss-target]');
-
-if(closeButton) {
-  closeButton.addEventListener('click', () => {
-    const target = document.querySelector(closeButton.dataset.dismissTarget);
-    target.classList.add('invisible');
-  });
-}
