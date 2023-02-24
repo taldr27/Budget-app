@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BudgetApp</title>
+    <title><%= yield(:title) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
@@ -12,15 +13,18 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <main class="container mx-auto mt-28 px-5 flex flex-col">
+      <% if notice.present? %>
+        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+      <% elsif alert.present? %>
+       <p class="py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg inline-block" id="notice"><%= alert %></p>
+      <% end %>
 
-    <% if notice || alert %>
-      <%= render 'layouts/alerts' %>
-    <% end %>
-
-    <br/>
-    <div class="mx-4">
+      <% if current_user %>
+        <%= render 'layouts/nav' %>
+      <% end %>
+      
       <%= yield %>
-    </div>
+    </main>
   </body>
 </html>
