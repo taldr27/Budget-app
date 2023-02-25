@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
   before_action :redirect_to_categories, only: %i[show index]
-  # Splash page for unauthenticated users (see app/controllers/application_controller.rb)
-  def splash
+  # Home page for unauthenticated users (see app/controllers/application_controller.rb)
+  def home
     if current_user
       redirect_to groups_url, alert: "You are already logged in as, #{current_user.name}"
     else
-      render :splash
+      render :home
     end
   end
 

@@ -18,9 +18,9 @@ RSpec.describe 'Log Out', type: :request do
     expect(response).to have_http_status(:redirect)
   end
 
-  it "renders 'splash' template after sign out" do
+  it "renders 'home' template after sign out" do
     sign_out @user
     get root_path
-    expect(response).to render_template('splash')
+    expect(response).to render_template('home')
   end
 end

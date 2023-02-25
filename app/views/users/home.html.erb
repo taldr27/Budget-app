@@ -1,8 +1,10 @@
 <% content_for :title, 'Smart Budget' %>
-<div class="absolute top-8 flex items-center">
-  <%= image_tag 'https://em-content.zobj.net/source/microsoft-teams/337/grinning-face_1f600.png', class: 'h-10 w-10' %>
+<div class="fixed top-0 right-0 left-0 flex justify-center items-center">
+  <%= image_tag "logo.svg", class: 'md:max-w-md w-20 mt-4' %>
+  <span class="h-6 text-[2.5rem] px-2 text-text">Smart-Budget</span>
 </div>
-<%= image_tag "logo.svg", class: 'md:max-w-md self-center' %>
+
+<%= image_tag "logo.svg", class: 'md:max-w-md self-center animate-pulse' %>
 
 <div class="actions absolute bottom-4 w-10/12 self-center">
   <%= link_to new_user_session_path, class: 'group rounded-lg mb-4 flex items-center bg-main p-3 justify-center border hover:border-main hover:bg-transparent' do %>
