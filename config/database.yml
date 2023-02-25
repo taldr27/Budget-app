@@ -27,8 +27,8 @@ default: &default
 
 development:
   <<: *default
-  # username: postgres
-  # password: <%= ENV['PG_PASSWORD'] %>
+  username: postgres
+  password: <%= ENV['PG_PASSWORD'] %>
   database: Budget_app_development
 
   # The specified database role being used to connect to postgres.
@@ -63,6 +63,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  username: postgres
+  password: <%= ENV['PG_PASSWORD'] %>
   database: Budget_app_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
