@@ -57,3 +57,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(120 113 108);
 }
+
+.o {
+  outline: auto;
+}
