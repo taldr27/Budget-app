@@ -11,6 +11,8 @@ development:
 
 test:
   <<: *default
+  # username: postgres
+  # password: <%= ENV['PG_PASSWORD'] %>
   database: Budget_app_test
 
 production:
