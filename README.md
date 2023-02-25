@@ -177,7 +177,7 @@ rspec
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/MarcoOquendoC/Budget-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
