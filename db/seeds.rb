@@ -7,14 +7,15 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 authors = User.create!([
-  {name: 'Andor', email: 'cassiandor@rebels.com', password: 'cassiandor'},
-  {name: 'Luthen Rael', email: 'luthenrael@rebels.com', password: 'luthen'},
-  {name: 'Bix Caleen', email: 'bixcaleen@rebels.com', password: 'bixcaleen'},
-  {name: 'Syril Karn', email: 'syrilkarn@empire.com', password: 'syrilkarn'},
-  {name: 'S.Linus Mosk', email: 'linusmosk@empire.com', password: 'linusmosk'},
-  {name: 'Maarva Andor', email: 'maarva@rebels.com', password: 'maarva'},
-  {name: 'Saw Gerrera', email: 'sawgerrera@rebels.com', password: 'sawgerrera'},
-  {name: 'John Doe', email: 'john@doe.com', password: 'johndoe'}
+  {name: 'SpongeBob', email: 'SpongeBob@friend.com', password: 'squarepants'},
+  {name: 'Patrick', email: 'patrick@friend.com', password: 'patrick'},
+  {name: 'Squidward', email: 'squidward@friend.com', password: 'squidward'},
+  {name: 'Mr. Krabs', email: 'krabs@friend.com', password: 'krabs1'},
+  {name: 'Plankton', email: 'plankton@foe.com', password: 'plankton'},
+  {name: 'Sandy', email: 'sandy@friend.com', password: 'sandy1'},
+  {name: 'Mrs. Puff', email: 'puff@friend.com', password: 'puff11'},
+  {name: 'Pearl', email: 'pearl@friend.com', password: 'pearl1'},
+  {name: 'Gary', email: 'gary@friend.com', password: 'gary11'},
 ])
 
 categories = Group.create!([
@@ -30,12 +31,11 @@ categories = Group.create!([
 ])
 
 expenses = Expense.create!([
-  {author: authors[0], name: 'Avengers: Infinity', amount: 8.99, groups: [categories[0]]},
-  {author: authors[0], name: 'Avengers: Endgame', amount: 10.99, groups: [categories[0]]},
-  {author: authors[0], name: 'Avengers: Age of Ultron', amount: 12.99, groups: [categories[0]]},
-  {author: authors[0], name: 'Tomato Sauce', amount: 14.99, groups: [categories[1]]},
-  {author: authors[0], name: 'Tomato Paste', amount: 16.99, groups: [categories[1]]},
-  {author: authors[0], name: 'Tomato Ketchup', amount: 18.99, groups: [categories[1]]},
-  {author: authors[0], name: 'Tomato Juice', amount: 20.99, groups: [categories[1]]},
-
+  {author: authors[0], name: 'Avengers: Infinity', amount: 1.01, groups: [categories[0]]},
+  {author: authors[0], name: 'Avengers: Endgame', amount: 10.02, groups: [categories[0]]},
+  {author: authors[0], name: 'Avengers: Age of Ultron', amount: 100.03, groups: [categories[0]]},
+  {author: authors[0], name: 'Groceries', amount: 1.04, groups: [categories[1]]},
+  {author: authors[0], name: 'Pizza', amount: 4, groups: [categories[1]]},
+  {author: authors[0], name: 'Drinks', amount: 5.9, groups: [categories[1]]},
+  {author: authors[0], name: 'Tomatoes', amount: 15, groups: [categories[1]]},
 ])
