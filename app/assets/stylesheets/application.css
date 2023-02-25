@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
