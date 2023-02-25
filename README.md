@@ -64,7 +64,7 @@
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-    <li><img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/capstone/images/erd_diagram.png?token=GHSAT0AAAAAABZNH7I23XC54TK56RK6UDNKY72JQVQ" alt="erd diagram">
+    <li><img src="./app/assets/images/erd_diagram.png" alt="erd diagram"></li>
   </ul>
 </details>
 
