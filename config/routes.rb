@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    sessions: 'users/sessions',
-    registrations: 'users/registrations',
-    passwords: 'users/passwords',
-  }
-  resources :deal_groups
-  resources :groups
-  resources :deals
-  resources :users
-  root 'home#index'
-  get 'home/index'
-  get 'home/about'
+  devise_for :users
+
+  root 'users#splash'
+  resources :users, only: [:splash]
+  resources :groups, only: [:index, :new, :create, :edit, :update, :destroy], :path => "categories" do 
+    resources :expenses, only: [:index, :new, :create, :edit, :update, :destroy], :path => "transactions"
+  end
 end
